@@ -1,11 +1,11 @@
 class Joke
 
-attr_reader :joke_number, :question, :answer
+attr_reader :id, :setup, :punchline
 
-def initialize(joke_number, question, answer)
-  @joke_number = joke_number
-  @question = question
-  @answer = answer
+def initialize(id, setup, punchline)
+  @id = id
+  @setup = setup
+  @punchline = punchline
 
 end
 end
