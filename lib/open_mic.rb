@@ -2,12 +2,16 @@ class OpenMic
 
   attr_reader
 
-  attr_reader :location, :date
+  attr_reader :location, :date, :performers
 
   def initialize(attributes)
     @location = attributes.fetch(:location)
     @date = attributes.fetch(:date)
     @performers = []
+  end
+
+  def welcome(performer)
+    @performers << performer
   end
 end
 
