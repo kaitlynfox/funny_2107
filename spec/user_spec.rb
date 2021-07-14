@@ -62,7 +62,8 @@ RSpec.describe User do
     user_1.tell(user_2, joke_2)
     expect(user_2.jokes).to eq([joke_1, joke_2])
 
-    user_2.joke_by_id(22).to eq(joke_1)
+    expect(user_2.joke_by_id(22)).to eq(joke_1)
+    expect(user_2.joke_by_id(13)).to eq(joke_2)
   end
 
 end
