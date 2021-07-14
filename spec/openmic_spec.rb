@@ -27,4 +27,14 @@ RSpec.describe OpenMic do
 
     expect(open_mic.performers).to eq([])
   end
+
+  it 'can welcome performers' do
+    open_mic = OpenMic.new({location: "Comedy Works", date: "11-20-18"})
+    user_1 = User.new("Sal")
+    user_2 = User.new("Ali")
+
+    open_mic.welcome(user_1)
+
+    expect(open_mic.performers).to eq([user_1])
+  end
 end
