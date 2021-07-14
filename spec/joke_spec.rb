@@ -10,13 +10,19 @@ RSpec.describe Joke do
   xit 'has an id' do
     joke = Joke.new(22, "Why did the strawberry cross the road?", "Because his mother was in a jam.")
 
-    expect(joke.id).to be_a(22)
+    expect(joke.id).to eq(22)
   end
 
   xit 'has a setup' do
     joke = Joke.new(22, "Why did the strawberry cross the road?", "Because his mother was in a jam.")
 
-    expect(joke.setup).to be_a("Why did the strawberry cross the road?")
+    expect(joke.setup).to eq("Why did the strawberry cross the road?")
+  end
+
+  xit 'has a punchline' do
+    joke = Joke.new(22, "Why did the strawberry cross the road?", "Because his mother was in a jam.")
+
+    expect(joke.punchline).to eq("Because his mother was in a jam.")
   end
 
 
